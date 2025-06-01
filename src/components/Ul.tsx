@@ -6,7 +6,7 @@ const Ul = ({
   children: React.ReactNode;
 }) => {
   return (
-    <ul className={`${className} flex items-center justify-center gap-12`}>
+    <ul className={"flex items-center justify-center " + className}>
       {children}
     </ul>
   );

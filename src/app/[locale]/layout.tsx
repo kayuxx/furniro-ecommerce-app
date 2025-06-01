@@ -1,3 +1,4 @@
+import { NextIntlClientProvider, hasLocale } from "next-intl";
 import NavBar from "@/components/NavBar";
 import type { Metadata } from "next";
 import { Poppins, Montserrat } from "next/font/google";
@@ -35,10 +36,12 @@ export default async function RootLayout({
       <body
         className={`${poppins.variable} ${montserrat.variable} antialiased`}
       >
-        <header className="content-grid border-red border">
-          <NavBar />
-        </header>
-        {children}
+        <NextIntlClientProvider>
+          <header className="content-grid fixed top-0 w-full overflow-x-hidden bg-white">
+            <NavBar />
+          </header>
+          <main>{children}</main>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

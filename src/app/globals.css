@@ -1,8 +1,14 @@
 @import "tailwindcss";
 
 @theme inline {
+  /* fonts */
   --font-ppns: var(--font-poppins);
   --font-mont: var(--font-montserrat);
+
+  /* colors */
+  --color-biege: hsl(33, 60%, 94%, 1);
+  --color-dark-grey: hsl(0, 0%, 20%, 1);
+  --color-yellow: hsl(42, 59%, 45%);
 
   /* breakpoints*/
   --breakpoint-3xl: 120rem;
@@ -17,7 +23,7 @@ body {
 /* credits to Kevin Powel to this approch to handle the viewport content */
 .content-grid,
 .fw {
-  @apply md:grid md:grid-cols-[[fw-s]_1fr_[cn-s]_6fr_[cn-e]_1fr_[fw-e]];
+  @apply md:grid md:grid-cols-[[fw-s]_0.5fr_[cn-s]_6fr_[cn-e]_0.5fr_[fw-e]];
 }
 
 .content-grid > :not(.fw),
